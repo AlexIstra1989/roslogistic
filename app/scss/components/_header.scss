@@ -1,4 +1,107 @@
-header {
- height: 180px;
- background-color: rgb(117, 123, 197);
+.header {
+		// .header__btn
+		&__btn {
+   display: block;
+   position: relative;
+   width: 44px;
+   height: 44px;
+   cursor: pointer;
+   z-index: 5;
+   span,
+   &::before,
+   &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $secondaryColor;
+   }
+   &::before {
+    top: 9px;
+    width: 100%;
+   }
+   &::after {
+    bottom: 9px;
+    width: 100%;
+   }
+   span {
+    top: calc(50% - 1px);
+   }
+   .menu-open & {
+    span {
+     width: 0;
+    }
+    &::before {
+     top: calc(50% - 1px);
+     transform: rotate(-45deg);
+    }
+    &::after {
+     bottom: calc(50% - 1px);
+     transform: rotate(45deg);
+    }
+   }
+   &.header__btn_active {
+    span {
+     width: 0;
+    }
+    &::before {
+     top: calc(50% - 2px);
+     transform: rotate(-45deg);
+    }
+    &::after {
+     bottom: calc(50% - 1px);
+     transform: rotate(45deg);
+    }
+   }
+		}
+
+		// .header__menu
+		&__menu {
+		}
+		// .header__logo
+		&__logo {
+		}
+		// .header__federal
+		&__federal {
+		}
+		// .header__phone
+		&__phone {
+		}
+		// .header__spb
+		&__spb {
+		}
+		// .header__calculate
+		&__calculate {
+		}
+}
+.menu {
+		// .menu__nav
+		&__nav {
+		}
+		// .menu__list
+		&__list {
+		}
+		// .menu__item
+		&__item {
+		}
+		// .menu__link
+		&__link {
+		}
+		// .menu__location
+		&__location {
+		}
+		// .menu__email
+		&__email {
+		}
+		// .menu__social
+		&__social {
+		}
+		// .menu__social-item
+		&__social-item {
+		}
+		// .menu__social-link
+		&__social-link {
+		}
 }
